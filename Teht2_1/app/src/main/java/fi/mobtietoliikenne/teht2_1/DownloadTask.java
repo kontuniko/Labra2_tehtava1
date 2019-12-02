@@ -19,15 +19,10 @@ public class DownloadTask extends AsyncTask<String,Void,String> {
     String vastaus = "";
 
         try {
-            URL url; url = new URL (nimi);
-            //URL url = new URL("http://android.com");
-            //Log.d("LOADPAGE", "" + url);
+            URL url;
+            url = new URL (nimi);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-
-            //InputStream stream = urlConnection.getInputStream();
-            //tvDataOutput.setText(fromStream(stream));
             vastaus = fromStream(urlConnection.getInputStream());
-
 
         } catch (MalformedURLException e) {
             e.printStackTrace();

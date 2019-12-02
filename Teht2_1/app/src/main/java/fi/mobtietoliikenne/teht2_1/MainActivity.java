@@ -22,7 +22,7 @@ import java.util.concurrent.ExecutionException;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText etAddressInput;
+    EditText etAddressInput;
     TextView tvDataOutput;
 
     @Override
@@ -32,10 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         findViewById(R.id.btnStartNavigation).setOnClickListener(this);
         tvDataOutput = (TextView) findViewById(R.id.tvDataOutput);
-
-        //DownloadTask downloadTask = new DownloadTask();
-
-
     }
 
     @Override
